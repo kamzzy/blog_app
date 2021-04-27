@@ -12,3 +12,4 @@ urlpatterns = [
     path('posts/', BlogListView.as_view(), name='posts'),
     
 ]
+
