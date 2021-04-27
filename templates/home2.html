@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+Hello {{user.username}}! Your welcome to Django 
+
+<h3>
+    <a href="{% url 'posts' %} ">See All Blog Posts </a>
+</h3>
+<p>
+    <a href="{% url 'logout' %} ">Logout</a>
+</p>
+  
+{% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %} ">Login</a>
+
+    {% endif %}
+
+{% endblock %}
+    
